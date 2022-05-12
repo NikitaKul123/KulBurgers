@@ -397,6 +397,7 @@
   .filter-products-main-box .my-products{
     width: 100%;
     margin-top: 30px; 
+    margin-left: 20px;
   }
 }
 
