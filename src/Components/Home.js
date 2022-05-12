@@ -3,7 +3,7 @@ import { Navbar } from './Navbar'
 import { Products } from './Products'
 import {auth,fs} from '../Config/Config'
 import { IndividualFilteredProduct } from './IndividualFilteredProduct'
-import heroBg from '../Images/heroBg.png'
+
 import { motion } from 'framer-motion'
 
 export const Home = (props) => {
@@ -116,8 +116,6 @@ export const Home = (props) => {
         {id: 'PotatoNuggets', text: `Картошка & Наггетсы`},            
     ])
 
-    
-
     // active class state
     const [active, setActive]=useState('');
 
@@ -175,7 +173,7 @@ export const Home = (props) => {
                     </div>
                 {filteredProducts.length > 0&&(
                   <div className='my-products'>
-                      <img src={heroBg} alt='heroBg' className='hero'/>
+                     
                       <h1 className='text-center'>{category}</h1>
                       <motion.div
                        initial ={{
@@ -229,7 +227,7 @@ export const Home = (props) => {
                                 transition={{
                                     delay: 0.2,
                                 }}
-                                src={heroBg} alt="hero" className='hero' />
+                                 />
                                 <motion.div
                                      initial ={{
                                         x: -1000,

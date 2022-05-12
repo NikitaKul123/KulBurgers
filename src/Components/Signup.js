@@ -77,7 +77,7 @@ export const Signup = () => {
             </form>
             {errorMsg&&<>
                 <br></br>
-                <div className='error-msg'>{errorMsg}</div>                
+                <div className='error-msg'>Пользователь  с такой почтой уже существует</div>                
             </>}
         </div>
         </div>

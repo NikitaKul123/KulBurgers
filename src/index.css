@@ -24,6 +24,7 @@
     justify-content: center;
     align-items: center;
   }
+  
 }
 
 .success-msg{
@@ -64,17 +65,7 @@
   }
 }
 
-.hero{
-  position: absolute;
-  z-index: -1;
-  width: 80%;
-  top: 22%;
-  opacity: 0.7;
-  background: rgb(89,89,89);
-  background: linear-gradient(0deg, rgba(89,89,89,1) 0%, rgba(0,0,0,1) 100%);
-  margin-top: 35px;
-  border-radius: 80px;
-  }
+
 .cart{
   margin: auto;
 }
@@ -393,6 +384,9 @@
   justify-content: center;
   align-items: center;  
   margin-top: 60px;
+  background: linear-gradient(0deg, rgba(89,89,89,0.7) 0%, rgba(0,0,0,0.7) 100%);
+  max-width: 90%;
+  border-radius: 50px;
 }
 
 .Vern{
@@ -442,8 +436,7 @@
   .dropdown {
   position: relative;
   display: inline-block;
-  
-  
+  margin: -15px;
   }
 
   .dropbtn {
@@ -453,6 +446,7 @@
     font-size: 16px;
     border: 0;
     border-radius: 18px;
+    margin: 0 0 0 3px;
     }
 
   .Desserts {
@@ -573,5 +567,11 @@
 }
 
 .text-center{
-  text-shadow: 2px 2px white;
+  color: #d0d0d0;
+    text-shadow: 2px 2px grey;
+}
+
+.container-fluid{
+  color: white;
+  margin-right: 50%;
 }

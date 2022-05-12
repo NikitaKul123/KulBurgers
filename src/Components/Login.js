@@ -28,7 +28,6 @@ export const Login = () => {
         }).catch(error=>setErrorMsg(error.message));
     }
     
-
   return (
     <div className='Containerr'>
     <div className='container'>
@@ -59,11 +58,10 @@ export const Login = () => {
       </form>
       {errorMsg&&<>
                 <br></br>
-                <div className='error-msg'>{errorMsg}</div>                
+                <div className='error-msg'>Логин или пароль введены не верно</div>                
             </>}
     </div>
     </div>
   )
 }
 
-export default Login;
