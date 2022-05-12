@@ -44,7 +44,7 @@ export const Modal = ({TotalPrice,totalQty,hideModal}) => {
         }
         hideModal();
         history.push('/');
-        toast.success('Your order has been placed successfully', {
+        toast.success('Ваш заказ успешно сформирован', {
             position: 'top-right',
             autoClose: 5000,
             hideProgressBar: false,

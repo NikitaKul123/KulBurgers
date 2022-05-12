@@ -162,7 +162,7 @@ export const Cart = () => {
         console.log(status);
         if(status==='success'){
             history.push('/');
-            toast.success('Your order has been placed successfully', {
+            toast.success('Ваш заказ успешно сформирован', {
                 position: 'top-right',
                 autoClose: 5000,
                 hideProgressBar: false,
