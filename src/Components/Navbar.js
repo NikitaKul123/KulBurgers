@@ -34,6 +34,7 @@ export const Navbar = ({user, totalProducts, isAdmin}) => {
 
                 {user&&<>
                     <div><Link className='navlink' to="/">{user}</Link></div>
+                    {!isAdmin && (<div><Link className='navlink' to="/order-list">Список заказов</Link></div>)}
                     {isAdmin && (<div><Link className='navlink' to="/ufghasjfasfsudgalfasjfhsjdg">Добавить продукты</Link></div>)}
                     <div className='cart-menu-btn'>
                         

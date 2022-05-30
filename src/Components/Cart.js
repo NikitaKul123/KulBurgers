@@ -220,7 +220,7 @@ export const Cart = () => {
             ) }
 
             {showModal===true&&(
-                <Modal TotalPrice={totalPrice} totalQty={totalQty}
+                <Modal products={cartProducts} TotalPrice={totalPrice} totalQty={totalQty}
                     hideModal={hideModal}
                 />
             )}          

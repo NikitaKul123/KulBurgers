@@ -7,6 +7,7 @@ import { Login } from "./Components/Login";
 
 import NotFound from "./Components/NotFound";
 import { Signup } from "./Components/Signup";
+import OrderList from "./Components/OrderList";
 
 export const App = () => {
   return (
@@ -17,6 +18,7 @@ export const App = () => {
         <Route path="/login" component = {Login}/>
         <Route path="/ufghasjfasfsudgalfasjfhsjdg" component = {AddProducts}/>
         <Route path="/cart" component = {Cart}/>
+        <Route path="/order-list" component = {OrderList}/>
         
         <Route component = {NotFound}/>       
       </Switch>

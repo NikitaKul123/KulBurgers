@@ -5,7 +5,7 @@ export const IndividualFilteredProduct = ({individualFilteredProduct, addToCart}
     const handleAddToCart=()=>{
         addToCart(individualFilteredProduct);
     }
-
+    
     return (
         <div className='product'>
             <div className='product-img'>

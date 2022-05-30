@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 toast.configure();
 
-export const Modal = ({TotalPrice,totalQty,hideModal}) => {
+export const Modal = ({products, TotalPrice,totalQty,hideModal}) => {
 
     const history = useHistory();
 
@@ -28,9 +28,11 @@ export const Modal = ({TotalPrice,totalQty,hideModal}) => {
         const uid = auth.currentUser.uid;
         const userData = await fs.collection('users').doc(uid).get();
         await fs.collection('Buyer-Personal-Info').add({
+            UserId: uid,
             Name: userData.data().FullName,
             Email: userData.data().Email,
             CellNo: cell,
+            Products: products,
             ResidentialAddress: residentialAddress,
             CartPrice: cartPrice,
             CartQty: cartQty

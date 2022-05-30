@@ -50,10 +50,15 @@ export const Home = (props) => {
     // state of products
     const [products, setProducts]=useState([]);
 
+    useEffect(() => {
+        getProducts();
+    },[])
+
     // getting products function
     const getProducts = async ()=>{
         const products = await fs.collection('Products').get();
-        const productsArray = [];
+    console.log(products);
+    const productsArray = [];
         for (var snap of products.docs){
             var data = snap.data();
             data.ID = snap.id;
@@ -66,9 +71,6 @@ export const Home = (props) => {
         }
     }
 
-    useEffect(()=>{
-        getProducts();
-    },[])
 
     // state of totalProducts
     const [totalProducts, setTotalProducts]=useState(0);
