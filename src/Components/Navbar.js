@@ -17,7 +17,7 @@ export const Navbar = ({user, totalProducts, isAdmin}) => {
             history.push('/login');
         })
     }
-    console.log(user)
+    
     return (
         <div className='navbar'>
             <div className='leftside'>
