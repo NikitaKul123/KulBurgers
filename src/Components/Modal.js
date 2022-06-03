@@ -67,7 +67,7 @@ export const Modal = ({products, TotalPrice,totalQty,hideModal}) => {
                     required onChange={(e)=>setCell(e.target.value)} value={cell}                        
                 />
                 <br></br>
-                <input type="text" className='form-control' placeholder='Адресс доставки'
+                <input type="text" className='form-control' placeholder='Адрес доставки'
                     required onChange={(e)=>setResidentialAddress(e.target.value)}
                     value={residentialAddress}
                 />
