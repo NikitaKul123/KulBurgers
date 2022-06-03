@@ -11,7 +11,7 @@ import { Modal } from './Modal';
 
 toast.configure();
 
-export const Cart = () => { 
+export const Cart = (isAdmin) => { 
     
     // show modal state
     const [showModal, setShowModal]=useState(false);
@@ -185,7 +185,7 @@ export const Cart = () => {
    
     return (
         <>
-            <Navbar user={user} totalProducts={totalProducts} />           
+            <Navbar user={user} totalProducts={totalProducts} isAdmin={isAdmin} />           
             <br></br>
             {cartProducts.length > 0 && (
                 <div className='container-fluid'>

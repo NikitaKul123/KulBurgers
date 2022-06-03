@@ -3,19 +3,23 @@ import OrderItemProduct from "./OrderItemProduct";
 
 const OrderItem = ({ order, forOrderList = false }) => {
   return (
+    
     <div className="order-item-container">
       {forOrderList && (
         <>
-          <div>Номер: {order.UserId}</div>
-          <div>Цена: {order.CartPrice}</div>
+          <div>Номер заказа: {order.UserId}</div>
+          <div>Стоимость заказа: {order.CartPrice}</div>
+          
         </>
       )}
 
       {!forOrderList && (
         <>
           <div>Имя заказчика: {order.Name}</div>
-          <div>Номер: {order.CellNo}</div>
-          <div>Цена: {order.CartPrice}</div>
+          <div>Номер заказа: {order.CellNo}</div>
+          <div>Стоимость заказа: {order.CartPrice}₽</div>
+          <div>Адрес заказа: {order.ResidentialAddress}</div>
+          <div>Пожелания: {order.Wishes}</div>
         </>
       )}
       <div className="order-item-container-products">
@@ -24,6 +28,7 @@ const OrderItem = ({ order, forOrderList = false }) => {
         ))}
       </div>
     </div>
+    
   );
 };
 

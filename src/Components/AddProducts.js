@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { IndividualProduct } from "./IndividualProduct.js";
 import { storage, fs } from "../Config/Config";
 import OrderItem from "./OrderItem.jsx";
+import { Link } from "react-router-dom";
 
 export const AddProducts = () => {
   const [title, setTitle] = useState("");
@@ -133,11 +134,12 @@ export const AddProducts = () => {
   };
 
   return (
-    <div className="Containerr">
-      <div>
-        <button onClick={() => setDasboardType("add")}>Добавить</button>
-        <button onClick={() => setDasboardType("delete")}>Удалить</button>
-        <button onClick={() => setDasboardType("orders")}>Заказы</button>
+    <div className="Containerrr">
+      <div className="settings-button-2">
+        <button className="settings-button" onClick={() => setDasboardType("add")}>Добавить</button>
+        <button className="settings-button" onClick={() => setDasboardType("delete")}>Удалить</button>
+        <button className="settings-button" onClick={() => setDasboardType("orders")}>Заказы</button>
+        <Link className='settings-button' to="/">Главная страница</Link> 
       </div>
       {dasboardType === "add" && (
         <div className="container">

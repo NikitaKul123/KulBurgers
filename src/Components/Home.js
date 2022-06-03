@@ -6,6 +6,13 @@ import { IndividualFilteredProduct } from "./IndividualFilteredProduct";
 
 import { motion } from "framer-motion";
 
+import '../index.css';
+import CarouselBox from "./CarouselBox";
+import Footer from "./Footer";
+
+
+
+
 export const Home = (props) => {
   const [isAdmin, setIsAdmin] = useState(false);
 
@@ -21,6 +28,8 @@ export const Home = (props) => {
     }, []);
     return uid;
   }
+
+  
 
   const uid = GetUserUid();
 
@@ -44,6 +53,8 @@ export const Home = (props) => {
     }, []);
     return user;
   }
+
+
 
   const user = GetCurrentUser();
   // console.log(user);
@@ -120,7 +131,7 @@ export const Home = (props) => {
 
   // active class state
   const [active, setActive] = useState("");
-  const [showMenu, setShowMenu] = useState(true);
+  const [showMenu, setShowMenu] = useState(false);
 
   // category state
   const [category, setCategory] = useState("");
@@ -159,23 +170,39 @@ export const Home = (props) => {
   return (
     <>
       <Navbar user={user} totalProducts={totalProducts} isAdmin={isAdmin} />
+      <CarouselBox />
       <br></br>
-      <div className="container-fluid filter-products-main-box">
-        <div className="dropdown">
+      <div className="container-fluid filter-products-main-box">        
+        <div id="mainmenu" className="dropdown">
+        
           <h6>
-            <div className="Vern">
-              <button onClick={toggleMenu} class="dropbtn">
+            <motion.div
+                  initial={{
+                    x: -1000,
+                    opacity: 0,
+                  }}
+                  animate={{
+                    x: 0,
+                    zIndex: -1,
+                    opacity: 1,
+                  }}
+                  transition={{
+                    delay: 0.4,
+                  }}
+            className="Vern">
+              <button onClick={toggleMenu}  class="dropbtn">
                 {showMenu ? "Скрыть меню" : "Показать меню"}
               </button>
-            </div>
+            </motion.div>
           </h6>
           {showMenu && (
             <h6>
-              <div className="Vern">
-                <button onClick={returntoAllProducts} class="dropbtn">
+              <div className="Vern-2">
+                <button onClick={returntoAllProducts} class="dropbtn-2">
                   Все меню
                 </button>
               </div>
+              
             </h6>
           )}
           {showMenu && (
@@ -196,18 +223,8 @@ export const Home = (props) => {
         {filteredProducts.length > 0 && (
           <div className="my-products">
             <h1 className="text-center">{category}</h1>
-            <motion.div
-              initial={{
-                x: +1000,
-                opacity: 0,
-              }}
-              animate={{
-                x: 0,
-                opacity: 1,
-              }}
-              transition={{
-                delay: 0.2,
-              }}
+            <div
+          
               className="products-box"
             >
               {filteredProducts.map((individualFilteredProduct) => (
@@ -217,7 +234,7 @@ export const Home = (props) => {
                   addToCart={addToCart}
                 />
               ))}
-            </motion.div>
+            </div>
           </div>
         )}
         {filteredProducts.length < 1 && (
@@ -279,6 +296,7 @@ export const Home = (props) => {
           </>
         )}
       </div>
+      <Footer/>
     </>
   );
 };

@@ -14,7 +14,7 @@ export const IndividualFilteredProduct = ({individualFilteredProduct, addToCart}
             <div className='product-text title'>{individualFilteredProduct.title}</div>
             <div className='product-text description'>{individualFilteredProduct.description}</div>
             <div className='product-text price'>₽ {individualFilteredProduct.price}</div>
-            <div className='btn btn-danger' onClick={handleAddToCart}>Добавить в корзину</div>
+            <div className='settings-button' onClick={handleAddToCart}>Добавить в корзину</div>
         </div> 
     )
 }

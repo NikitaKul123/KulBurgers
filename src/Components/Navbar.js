@@ -19,7 +19,7 @@ export const Navbar = ({user, totalProducts, isAdmin}) => {
     }
     
     return (
-        <div className='navbar'>
+        <div id='begin' className='navbar'>
             <div className='leftside'>
                 <div className='logo'>
                     <img src={logo} alt="logo"/>
@@ -34,17 +34,13 @@ export const Navbar = ({user, totalProducts, isAdmin}) => {
 
                 {user&&<>
                     <div><Link className='navlink' to="/">{user}</Link></div>
-                    {!isAdmin && (<div><Link className='navlink' to="/order-list">Список заказов</Link></div>)}
-                    {isAdmin && (<div><Link className='navlink' to="/ufghasjfasfsudgalfasjfhsjdg">Добавить продукты</Link></div>)}
+                    {!isAdmin &&(<div><Link className='navlink' to="/order-list">Список заказов</Link></div>)}
+                    {isAdmin && (<div><Link className='navlink' to="/ufghasjfasfsudgalfasjfhsjdg">Дэшборд</Link></div>)}
                     <div className='cart-menu-btn'>
-                        
-                        <Link className='navlink' to="cart">
-                            <Icon icon={shoppingCart} size={20}/>
-                        </Link>
-                       
+                        <Link className='navlink' to="cart"><Icon icon={shoppingCart} size={20}/></Link>
                         <span className='cart-indicator'>{totalProducts}</span>
                     </div>
-                    <div className='btn btn-danger btn-md'
+                    <div className='settings-button btn-md'
                     onClick={handleLogout}>Выйти</div>
                     
                   

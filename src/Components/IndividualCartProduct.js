@@ -43,7 +43,7 @@ export const IndividualCartProduct = ({cartProduct, cartProductIncrease,cartProd
                 </div>
             </div>
             <div className='product-text cart-price'>₽ {cartProduct.TotalProductPrice}</div>
-            <div className='btn btn-danger ' onClick={handleCartProductDelete}>Удалить</div>            
+            <div className='settings-button ' onClick={handleCartProductDelete}>Удалить</div>            
         </div>
     )
 } 

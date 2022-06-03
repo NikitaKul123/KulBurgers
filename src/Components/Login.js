@@ -24,7 +24,7 @@ export const Login = () => {
                 setTimeout(()=>{
                     setSuccessMsg('');
                     history.push('/');
-                },3000)
+                },2000)
         }).catch(error=>setErrorMsg(error.message));
     }
     
@@ -64,4 +64,3 @@ export const Login = () => {
     </div>
   )
 }
-

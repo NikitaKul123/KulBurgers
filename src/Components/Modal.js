@@ -13,6 +13,7 @@ export const Modal = ({products, TotalPrice,totalQty,hideModal}) => {
     // form states
     const [cell, setCell]=useState(null);
     const [residentialAddress, setResidentialAddress]=useState('');
+    const [wishes, setWishes]=useState('');
     const [cartPrice]=useState(TotalPrice);
     const [cartQty]=useState(totalQty);
 
@@ -34,6 +35,7 @@ export const Modal = ({products, TotalPrice,totalQty,hideModal}) => {
             CellNo: cell,
             Products: products,
             ResidentialAddress: residentialAddress,
+            Wishes: wishes,
             CartPrice: cartPrice,
             CartQty: cartQty
         })
@@ -68,6 +70,11 @@ export const Modal = ({products, TotalPrice,totalQty,hideModal}) => {
                 <input type="text" className='form-control' placeholder='Адресс доставки'
                     required onChange={(e)=>setResidentialAddress(e.target.value)}
                     value={residentialAddress}
+                />
+                <br></br>
+                <input type="text" className='form-control' placeholder='Пожелания'
+                    required onChange={(e)=>setWishes(e.target.value)}
+                    value={wishes}
                 />
                 <br></br>
                 <label>Общее количество:</label>

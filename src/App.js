@@ -9,20 +9,30 @@ import NotFound from "./Components/NotFound";
 import { Signup } from "./Components/Signup";
 import OrderList from "./Components/OrderList";
 
+
+
+
 export const App = () => {
   return (
+
+    
     <BrowserRouter>
+     
       <Switch>
         <Route exact path="/" component = {Home}/>
         <Route path="/signup" component = {Signup}/>
+        
         <Route path="/login" component = {Login}/>
         <Route path="/ufghasjfasfsudgalfasjfhsjdg" component = {AddProducts}/>
         <Route path="/cart" component = {Cart}/>
-        <Route path="/order-list" component = {OrderList}/>
-        
-        <Route component = {NotFound}/>       
+        <Route path="/order-list" component = {OrderList}/>        
+        <Route component = {NotFound}/>     
       </Switch>
+
+      
     </BrowserRouter>
+
+    
   );
 };
 

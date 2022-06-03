@@ -25,11 +25,11 @@ export const IndividualProduct = ({
       </div>
       <div className="product-text price">₽ {individualProduct.price}</div>
       {forAdminDashbord ? (
-        <div className="btn btn-danger" onClick={handleDeleteProduct}>
+        <div className="settings-button" onClick={handleDeleteProduct}>
           Удалить товар
         </div>
       ) : (
-        <div className="btn btn-danger" onClick={handleAddToCart}>
+        <div className="settings-button" onClick={handleAddToCart}>
           Добавить в корзину
         </div>
       )}

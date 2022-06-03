@@ -26,7 +26,7 @@ export const Signup = () => {
             fs.collection('users').doc(credentials.user.uid).set({
                 FullName: fullName,
                 Email: email,
-                Password: password
+                Password: password,
             }).then(()=>{
                 setSuccessMsg('Вы успешно зарегестрировались.Теперь вы будете автоматически перенаправлены на страницу входа');
                 setFullname('');
@@ -36,7 +36,7 @@ export const Signup = () => {
                 setTimeout(()=>{
                     setSuccessMsg('');
                     history.push('/login');
-                },3000)
+                },1000)
             }).catch(error=>setErrorMsg(error.message));
         }).catch((error)=>{
             setErrorMsg(error.message)
