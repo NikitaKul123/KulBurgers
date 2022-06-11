@@ -16,7 +16,7 @@ const OrderItem = ({ order, forOrderList = false }) => {
       {!forOrderList && (
         <>
           <div>Имя заказчика: {order.Name}</div>
-          <div>Номер заказа: {order.CellNo}</div>
+          <div>Номер телефона: {order.CellNo}</div>
           <div>Стоимость заказа: {order.CartPrice}₽</div>
           <div>Адрес заказа: {order.ResidentialAddress}</div>
           <div>Пожелания: {order.Wishes}</div>
