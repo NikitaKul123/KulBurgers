@@ -67,9 +67,28 @@
 }
 
 @media (max-width: 450px) {
-  .navbar {
+  .navbar  {
     flex-direction: column;
     justify-content: center;
+  }
+  .navbar .logo img {
+    margin: -25% 0 0 -40vw;
+  }
+  .slider{
+    max-height: 50vh;
+    min-width: 100vw;
+  }
+
+}
+
+@media (max-width: 1920px) {
+  .slider{
+    display: block;
+    width: 100vw;
+    height: 90vh;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1));
+    background-position: center;
+    background-size: cover;
   }
 }
 
@@ -98,10 +117,8 @@
 
 @media (max-width: 450px) {
   .navbar .rightside {
-    flex-direction: column;
     justify-content: center;
-    margin-top: 20px;
-    margin-right: 0px;
+    margin: -8vh 0 0 50px;
   }
 }
 
@@ -109,11 +126,6 @@
   margin: 0px 10px;
 }
 
-@media (max-width: 450px) {
-  .navbar .rightside div {
-    margin: 10px 0px;
-  }
-}
 
 .navbar .rightside div .navlink {
   display: inline-block;	
@@ -176,7 +188,6 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
-  margin-right: 24px;
   transition: all 0.3s ease-in-out;
   padding: 12px;
   border-radius: 10px;
@@ -505,6 +516,29 @@
     padding-left: 10px;
     padding-top: 5px;
   }
+
+  .dropbtn{
+    display: none;
+  }
+
+  .open-btn {
+    background: rgb(241 241 241 / 50%);
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: 0;
+    border-radius: 18px;
+    margin: 0 0 0 5px;
+  }
+
+  .navbar .rightside {
+      justify-content: center;
+      margin: -8vh 0 0 20vw;
+  }
+  .slider{
+    max-height: 50vh;
+    min-width: 100vw;
+  }
 }
 
 .filter-box h6 {
@@ -522,6 +556,29 @@
 .carousel-caption{
   height: 90vh;
   margin-right: 600px;
+  transform: translate(80vh,70vh);
+}
+@media(max-width: 560px) {
+  .menu-carousel{
+    transform: translate(45vh,20vh);
+  }
+  .dropbtn {
+    display: none;
+  }
+  .navbar  {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .navbar .logo img {
+    margin: -25% 0 0 -40vw;
+  }
+  .slider{
+    max-height: 50vh;
+    min-width: 100vw;
+  }
+  .navbar .rightside{
+    margin: -60px 0 0 50px;
+  }
 }
 
 .menu-carousel{
@@ -529,6 +586,7 @@
   margin-bottom: 1rem;
   box-shadow: 3px 5px #e9ba23;
   margin: 0 0 0 -250px;
+  
 }
 .filter-box span {
   cursor: pointer;
@@ -656,6 +714,11 @@
   padding: 15px;
   font-size: 20px;
 }
+.dropdown-content2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 
 
 
@@ -762,14 +825,9 @@
   user-select: none;
 }
 
-.slider{
-  display: block;
-  width: 100%;
-  height: 850px;
-  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1));
-  background-position: center;
-  background-size: cover;
-}
+
+
+
 
 
 

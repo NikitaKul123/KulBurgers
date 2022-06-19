@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
-
 export const FooterContainer = styled.footer`
-background: rgb(241 241 241 / 40%);
+  background: rgb(241 241 241 / 40%);
 `;
 
 export const FooterWrap = styled.div`
@@ -12,7 +11,7 @@ export const FooterWrap = styled.div`
   justify-content: center;
   align-items: center;
   max-width: 1300px;
-  margin: 0 auto;
+  margin: 5vh 0 0 0;
 `;
 
 export const SocialMedia = styled.section`
@@ -31,8 +30,6 @@ export const SocialMediaWrap = styled.div`
   }
 `;
 
-
-
 export const SocialIcons = styled.div`
   display: flex;
   justify-content: space-between;
@@ -44,4 +41,3 @@ export const SocialIconLink = styled.a`
   color: #fff;
   font-size: 24px;
 `;
-

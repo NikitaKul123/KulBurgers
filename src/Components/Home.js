@@ -9,6 +9,7 @@ import { motion } from 'framer-motion';
 import '../index.css';
 import CarouselBox from './CarouselBox';
 import Footer from './Footer';
+import Modal from '../Modal/Modal';
 
 export const Home = (props) => {
   const [isAdmin, setIsAdmin] = useState(false);
@@ -58,7 +59,6 @@ export const Home = (props) => {
   // getting products function
   const getProducts = async () => {
     const products = await fs.collection('Products').get();
-    console.log(products);
     const productsArray = [];
     for (var snap of products.docs) {
       var data = snap.data();
@@ -160,6 +160,8 @@ export const Home = (props) => {
     setShowMenu((state) => !state);
   };
 
+  const [modalActive, setModalActive] = useState(false);
+
   return (
     <>
       <Navbar user={user} totalProducts={totalProducts} isAdmin={isAdmin} />
@@ -187,6 +189,7 @@ export const Home = (props) => {
               </button>
             </motion.div>
           </h6>
+
           {showMenu && (
             <h6>
               <div className="Vern-2">
@@ -196,6 +199,31 @@ export const Home = (props) => {
               </div>
             </h6>
           )}
+
+          <div className="app">
+            <main>
+              <button className="open-btn" onClick={() => setModalActive(true)}>
+                открыть меню
+              </button>
+            </main>
+            <Modal active={modalActive} setActive={setModalActive}>
+              <div className="dropdown-content2">
+                <button onClick={returntoAllProducts} class="dropbtn-2">
+                  Все меню
+                </button>
+                {spans.map((individualSpan, index) => (
+                  <span
+                    key={index}
+                    id={individualSpan.id}
+                    onClick={() => handleChange(individualSpan)}
+                    className={individualSpan.id === active ? active : 'deactive'}>
+                    {individualSpan.text}
+                  </span>
+                ))}
+              </div>
+            </Modal>
+          </div>
+
           {showMenu && (
             <div className="dropdown-content">
               {spans.map((individualSpan, index) => (

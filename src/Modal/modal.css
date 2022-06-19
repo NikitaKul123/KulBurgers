@@ -1,0 +1,115 @@
+.modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: black;
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal__content {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #3d3d3db5;
+    transform: scale(0.5);
+    transition: 0.4s all;
+    width: 50vm;
+}
+
+.modal__content.active {
+    transform: scale(1);
+}
+
+@media (max-width: 450px) {
+    .deactive{
+        padding: 16px;
+    }
+
+    .dropbtn-2{
+      padding: 16px;
+      margin: 0 0 0 -0px;
+      font-size: 20px;
+      float: right;
+    }
+
+      .Desserts {
+        
+        color: black;
+        padding: 16px;
+        font-size: 20px;
+        border: 0;
+        border-radius: 18px;
+      }
+      
+      .Sauces {
+        
+        color: black;
+        padding: 16px;
+        font-size: 20px;
+        border: 0;
+        border-radius: 18px;
+      }
+      
+      .TheDrinks {
+        
+        color: black;
+        padding: 16px;
+        font-size: 20px;
+        border: 0;
+        border-radius: 18px;
+      }
+      
+      .Burgers {
+        
+        color: black;
+        padding: 16px;
+        font-size: 20px;
+        border: 0;
+        border-radius: 18px;
+      }
+      
+      .LunchBox {
+       
+        color: black;
+        padding: 16px;
+        font-size: 20px;
+        border: 0;
+        border-radius: 18px;
+      }
+      
+      .Combo {
+       
+        color: black;
+        padding: 16px;
+        font-size: 20px;
+        border: 0;
+        border-radius: 18px;
+      }
+      
+      .PotatoNuggets {
+       
+        color: black;
+        padding: 16px;
+        font-size: 20px;
+        border: 0;
+        border-radius: 18px;
+      }
+}
+
+@media (min-width: 1920px) {
+    .open-btn {
+        display: none;
+    }
+}

@@ -7,3 +7,16 @@ body{
 .container{
     color: white;
 }
+
+@media (max-width: 450px) {
+    .Containerr {
+        width: 50vw;
+    }
+    .btn {
+        width: 15vw;
+        height: 10vh;
+    }
+    .regist {
+        margin: 0 0 0 -10px;
+    }
+}
