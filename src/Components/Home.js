@@ -190,16 +190,6 @@ export const Home = (props) => {
             </motion.div>
           </h6>
 
-          {showMenu && (
-            <h6>
-              <div className="Vern-2">
-                <button onClick={returntoAllProducts} class="dropbtn-2">
-                  Все меню
-                </button>
-              </div>
-            </h6>
-          )}
-
           <div className="app">
             <main>
               <button className="open-btn" onClick={() => setModalActive(true)}>
@@ -223,6 +213,16 @@ export const Home = (props) => {
               </div>
             </Modal>
           </div>
+
+          {showMenu && (
+            <h6>
+              <div className="Vern-2">
+                <button onClick={returntoAllProducts} class="dropbtn-2">
+                  Все меню
+                </button>
+              </div>
+            </h6>
+          )}
 
           {showMenu && (
             <div className="dropdown-content">
