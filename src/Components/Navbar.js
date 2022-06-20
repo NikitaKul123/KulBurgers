@@ -5,6 +5,7 @@ import { Icon } from 'react-icons-kit';
 import { shoppingCart } from 'react-icons-kit/feather/shoppingCart';
 import { auth } from '../Config/Config';
 import { useHistory } from 'react-router-dom';
+import { BiExit } from 'react-icons/bi';
 
 export const Navbar = ({ user, totalProducts, isAdmin }) => {
   const history = useHistory();
@@ -66,7 +67,10 @@ export const Navbar = ({ user, totalProducts, isAdmin }) => {
               <span className="cart-indicator">{totalProducts}</span>
             </div>
             <div className="settings-button btn-md" onClick={handleLogout}>
-              Выйти
+              <div className="popup">
+                <BiExit />
+              </div>
+              <div className="no-popup">Выйти</div>
             </div>
           </>
         )}

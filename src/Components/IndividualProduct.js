@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export const IndividualProduct = ({
   individualProduct,
@@ -20,16 +20,14 @@ export const IndividualProduct = ({
         <img src={individualProduct.url} alt="product-img" />
       </div>
       <div className="product-text title">{individualProduct.title}</div>
-      <div className="product-text description">
-        {individualProduct.description}
-      </div>
+      <div className="product-text description">{individualProduct.description}</div>
       <div className="product-text price">₽ {individualProduct.price}</div>
       {forAdminDashbord ? (
         <div className="settings-button" onClick={handleDeleteProduct}>
           Удалить товар
         </div>
       ) : (
-        <div className="settings-button" onClick={handleAddToCart}>
+        <div className="settings-button1" onClick={handleAddToCart}>
           Добавить в корзину
         </div>
       )}
