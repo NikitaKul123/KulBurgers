@@ -551,6 +551,16 @@
 .settings-button:active {
 	transform: scale(0.96);
 }
+.settings-button1:focus-visible {
+	box-shadow: 0 0 0 2px #666;
+}
+.settings-button1:hover {
+	background-color: #DBE7F2;
+  color: #000;
+}
+.settings-button1:active {
+	transform: scale(0.96);
+}
 
 
 .Vern-2 {
