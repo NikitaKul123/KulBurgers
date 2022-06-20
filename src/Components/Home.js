@@ -120,7 +120,7 @@ export const Home = (props) => {
     { id: 'TheDrinks', text: 'Напитки' },
     { id: 'Desserts', text: 'Десерты' },
     { id: 'Sauces', text: 'Соусы' },
-    { id: 'PotatoNuggets', text: `Картошка & Наггетсы` },
+    { id: 'PotatoNuggets', text: 'Картошка & Наггетсы' },
   ]);
 
   // active class state
@@ -192,12 +192,12 @@ export const Home = (props) => {
           <div className="asd">
             <main>
               <button className="open-btn" onClick={() => setModalActive(true)}>
-                открыть меню
+                Открыть меню
               </button>
             </main>
             <Modal active={modalActive} setActive={setModalActive}>
               <div className="dropdown-content2">
-                <button onClick={returntoAllProducts} class="dropbtn-3">
+                <button onClick={returntoAllProducts} class="dropbtn-2">
                   Все меню
                 </button>
                 {spans.map((individualSpan, index) => (
@@ -216,7 +216,7 @@ export const Home = (props) => {
           {showMenu && (
             <h6>
               <div className="Vern-2">
-                <button onClick={returntoAllProducts} class="dropbtn-2">
+                <button onClick={returntoAllProducts} class="dropbtn-3">
                   Все меню
                 </button>
               </div>

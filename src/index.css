@@ -567,6 +567,20 @@
   border-radius: 18px;
   margin: 0 0 0 8px;
 }
+
+.dropbtn-3 {
+  background: rgb(241 241 241 / 50%);
+  color: black;
+  padding: 19px;
+  font-size: 18px;
+  border: 0;
+  border-radius: 18px;
+  margin: 0 0 0 8px;
+}
+.dropbtn-3:focus{
+  background: white;
+}
+
 .dropbtn-2:focus{
   background: white;
 }
