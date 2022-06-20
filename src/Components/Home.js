@@ -197,7 +197,7 @@ export const Home = (props) => {
             </main>
             <Modal active={modalActive} setActive={setModalActive}>
               <div className="dropdown-content2">
-                <button onClick={returntoAllProducts} class="dropbtn-2">
+                <button onClick={returntoAllProducts} class="dropbtn-3">
                   Все меню
                 </button>
                 {spans.map((individualSpan, index) => (
