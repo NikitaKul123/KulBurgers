@@ -10,11 +10,17 @@ body{
 
 @media (max-width: 450px) {
     .Containerr {
-        width: 50vw;
+        width: 80vw;
     }
     .btn {
         width: 15vw;
-        height: 10vh;
+        height: 5vh;
+    }
+    .btn-dark {
+        width: 65px;
+    }
+    .btn5 {
+        margin: 0 0 0 -8%;
     }
     .regist {
         margin: 0 0 0 -10px;

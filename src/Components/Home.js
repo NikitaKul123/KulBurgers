@@ -13,6 +13,7 @@ import Modal from '../Modal/Modal';
 
 export const Home = (props) => {
   const [isAdmin, setIsAdmin] = useState(false);
+  const [modalActive, setModalActive] = useState(false);
 
   // getting current user uid
   function GetUserUid() {
@@ -160,8 +161,6 @@ export const Home = (props) => {
     setShowMenu((state) => !state);
   };
 
-  const [modalActive, setModalActive] = useState(false);
-
   return (
     <>
       <Navbar user={user} totalProducts={totalProducts} isAdmin={isAdmin} />
@@ -190,7 +189,7 @@ export const Home = (props) => {
             </motion.div>
           </h6>
 
-          <div className="app">
+          <div className="asd">
             <main>
               <button className="open-btn" onClick={() => setModalActive(true)}>
                 открыть меню
